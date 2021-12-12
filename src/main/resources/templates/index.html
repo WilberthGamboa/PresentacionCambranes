@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pelicula</title>
+   
+</head>
+
+<body>
+    
+        <table >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>nombre</th>
+                    <th>año</th>
+                    <th>opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pelicula:${pelicula}">
+                    <td th:text="${pelicula.id}"></td>
+                    <td th:text="${pelicula.nombre}"></td>
+                    <td th:text="${pelicula.anio}"></td>
+                    <td>
+
+                        <a th:href="@{/editar/}+${pelicula.id}" >editar</a>
+                        <a th:href="@{/eliminar/}+${pelicula.id}">eliminar</a>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/new}" >ADD</a>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Anime</title>
+        
+    </head>
+    <body>
+       
+                <form th:action="@{/save}" th:object=${pelicula} method="POST">
+
+                    
+                    
+                     
+                     
+                                <label >id</label>
+                                <input th:field="*{id}" type="text" class="form-control" >
+                                
+
+               
+
+                     
+                                <label >nombre pelicula</label>
+                                <input th:field="*{nombre}" type="text" class="form-control" >
+                                
+
+                   
+                          
+                                <label >pelicula</label>
+                                <input th:field="*{anio}" type="number" class="form-control" >
+                                
+
+                
+
+
+
+            
+                        <input type="submit" value="Save" >
+                   
+    
+                
+                </form>
+                
+
+         
+        
+
+    </body>
+</html>
